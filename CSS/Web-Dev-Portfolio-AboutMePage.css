@@ -1,0 +1,252 @@
+/* I reset the default styles. */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Light Mode Colours*/
+.Light-Mode-Colors {
+    --Background-Color-Change: white;
+    --Maroon-Color: rgba(73, 48, 54, 255);
+    color: #333;
+}
+
+/* Dark Mode Colours*/
+.Dark-Mode-Colors {
+    --Background-Color-Change: #444444;
+    --White-Text-Color: white;
+    color: var(--White-Text-Color);
+}
+
+/* These are the stylings I used for the body element. */
+body {
+    background: var(--Background-Color-Change);
+    overflow-x: hidden;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe container. */
+.Web-Dev-Portfolio-AboutMe {
+    min-height: 100vh;
+    width: 100%;
+    padding: 90px;
+}
+
+/* This styles the image within the Web-Dev-Portfolio-AboutMe container. */
+.Web-Dev-Portfolio-AboutMe img {
+    height: auto;
+    width: 50%;
+    border: 2px solid var(--Maroon-Color);
+    border-radius: 50px;
+    box-shadow: 0 0 5px var(--Maroon-Color), 0 0 55px var(--Maroon-Color);
+    margin-bottom: 50px;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideTransitionFromLeft 1s ease forwards;
+    animation-delay: .7s;
+}
+
+/* This styles the image within the Web-Dev-Portfolio-AboutMe container when hovered. */
+.Web-Dev-Portfolio-AboutMe img:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transition: 1.5s;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Main-Content container. */
+.Web-Dev-Portfolio-AboutMe-Main-Content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Content container. */
+.Web-Dev-Portfolio-AboutMe-Content {
+    margin-bottom: 180px;
+}
+
+/* This styles the h1 elements within the Web-Dev-Portfolio-AboutMe-Content container. */
+.Web-Dev-Portfolio-AboutMe-Content h1 {
+    color: var(--White-Text-Color);
+    font-size: 4rem;
+    text-transform: capitalize;
+    margin-top: -105px;
+    margin-bottom: 5px;
+    margin-left: 70px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: .7s;
+}
+
+/* This styles the h5 elements within the Web-Dev-Portfolio-AboutMe-Content container. */
+.Web-Dev-Portfolio-AboutMe-Content h5 {
+    color: var(--Maroon-Color);
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 70px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: .9s;
+}
+
+/* This styles the p elements within the Web-Dev-Portfolio-AboutMe-Content container. */
+.Web-Dev-Portfolio-AboutMe-Content p {
+    color: var(--White-Text-Color);
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-bottom: 25px;
+    margin-left: 70px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+/* This styles all the span elements. */
+span {
+    color: rgba(73,48,54,255);
+}
+
+/* This styles the container for the clickable texts that opens a tab to show different categories of trivia information about me. */
+.Web-Dev-Portfolio-AboutMe-Trivias {
+    display: flex;
+    margin: 5px 0 -25px;
+}
+
+/* This styles the each clickable tabs within the container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* This styles the underline indicator for the active tab. */
+.Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--Maroon-Color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.8s;
+}
+
+/* This styles the underline indicator for the active tab as well by expanding the line (to 70%) when it is active. */
+.Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac.active-link::after {
+    width: 70%;
+}
+
+/* This styles the unordered list within the Web-Dev-Portfolio-AboutMe-Trivias-Infos container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* This styles the list items within the Web-Dev-Portfolio-AboutMe-Trivias-Infos container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos ul li {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 80px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* This styles the spans that is within the list items found in the Web-Dev-Portfolio-AboutMe-Trivias-Infos container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos ul li span {
+    color: var(--Maroon-Color);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 2.5;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Trivias-Infos container. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos {
+    display: none;
+    position: absolute;
+    background-color: white;
+    margin-top: 25px;
+    left: 54%;
+    width: 90%;
+    max-width: 650px;
+    padding: 20px;
+    border: solid 2px var(--Maroon-Color);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--Maroon-Color), 0 0 35px var(--Maroon-Color);
+    z-index: 1;
+    animation: slideTransitionFromRight 1s ease forwards;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Trivias-Infos container when hovered. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    transition: 1.5s;
+    z-index: 2;
+}
+
+/* This styles the Web-Dev-Portfolio-AboutMe-Trivias-Infos container when active or showing. */
+.Web-Dev-Portfolio-AboutMe-Trivias-Infos.active-tab {
+    display: block;
+}
+
+
+/* The styling to be used when in dark mode. */
+.Dark-Mode-Colors .Web-Dev-Portfolio-AboutMe-Trivias-Infos {
+    background-color: #333;
+    color: white;
+}
+
+/* The styling to be used when in light mode. */
+.Light-Mode-Colors .Web-Dev-Portfolio-AboutMe-Trivias-Infos {
+    background-color: white;
+    color: #333;
+}
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--Maroon-Color);
+    padding: 20px;
+    color: white;
+}
+
+
+/* The following lines are the Keyframe animations: */
+/* Keyframe animation for sliding in from the left. */
+@keyframes slideTransitionFromLeft {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(-100px); /* It moves it 100px to the left. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for sliding in from the right. */
+@keyframes slideTransitionFromRight {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(100px); /* It moves it 100px to the right. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
