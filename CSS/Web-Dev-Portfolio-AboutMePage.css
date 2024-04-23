@@ -1,7 +1,7 @@
 /* I reset the default styles. */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Orbitron', sans-serif;
 }
@@ -25,6 +25,103 @@ body {
     background: var(--Background-Color-Change);
     overflow-x: hidden;
 }
+
+/* This section styles the header of my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Header {
+    background: var(--Maroon-Color);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 25px 7%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* This styles the logo of my website. */
+.Web-Dev-Portfolio-Logo {
+    color: white;
+    margin-right: auto;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 1000;
+    cursor: pointer;
+    animation: slideTransitionFromRight 1.8s ease forwards;
+}
+
+/* This styles the logo upon hover. */
+.Web-Dev-Portfolio-Logo:hover {
+    transform: scale(1.2);
+    animation: none; /* To disable the animation on hover. */
+}
+
+
+/* Navigation Menu: */
+/* This styles the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    font-weight: 550;
+    margin-right: 33px;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0; /* I set the width to 0 for the invisible line. */
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website when hovered. */
+.Web-Dev-Portfolio-Navigation-Menu a:hover::before {
+    width: 100%; /* When the user hovers, the line below the text expands to its full width. */
+}
+
+/* Light and Dark Mode Buttons: */
+/* This styles the dark mode button within my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Dark-Mode-Button {
+    display: flex;
+    margin-top: 1px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 2.9s;
+}
+/* This styles the icon. */
+.Web-Dev-Portfolio-Dark-Mode-Button .Dark-Mode-Button {
+    color: white;
+    font-size: 28px;
+}
+
+/* This styles the sun and moon icons when hovered in light mode. */
+.Light-Mode-Colors .bx-moon:hover,
+.Light-Mode-Colors .bx-sun:hover {
+    color: rgb(255, 255, 0); /* The sun's color changes into yellow when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+/* This styles the sun and moon icons when hovered in dark mode. */
+.Dark-Mode-Colors .bx-sun:hover,
+.Dark-Mode-Colors .bx-moon:hover {
+    color: rgb(204, 204, 204); /* The moon's color changes into gray when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
 
 /* This styles the Web-Dev-Portfolio-AboutMe container. */
 .Web-Dev-Portfolio-AboutMe {
