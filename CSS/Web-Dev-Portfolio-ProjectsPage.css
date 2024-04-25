@@ -1,0 +1,330 @@
+/* I reset the default styles. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Light Mode Colours*/
+.Light-Mode-Colors {
+    --Background-Color-Change: white;
+    --Maroon-Color: rgba(73, 48, 54, 255);
+    color: #333;
+}
+
+/* Dark Mode Colours*/
+.Dark-Mode-Colors {
+    --Background-Color-Change: #444444;
+    --White-Text-Color: white;
+    color: var(--White-Text-Color);
+}
+
+/* These are the stylings I used for the body element. */
+body {
+    background: var(--Background-Color-Change);
+    overflow-x: hidden;
+}
+
+/* This section styles the header of my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Header {
+    background: var(--Maroon-Color);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 25px 7%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* This styles the logo of my website. */
+.Web-Dev-Portfolio-Logo {
+    color: white;
+    margin-right: auto;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 1000;
+    cursor: pointer;
+    animation: slideTransitionFromRight 1.8s ease forwards;
+}
+
+/* This styles the logo upon hover. */
+.Web-Dev-Portfolio-Logo:hover {
+    transform: scale(1.2);
+    animation: none; /* To disable the animation on hover. */
+}
+
+
+/* Navigation Menu: */
+/* This styles the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    font-weight: 550;
+    margin-right: 33px;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Navigation-Menu a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0; /* I set the width to 0 for the invisible line. */
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+/* This styles the line below the navigation links in my Web Development Personal Portfolio Website when hovered. */
+.Web-Dev-Portfolio-Navigation-Menu a:hover::before {
+    width: 100%; /* When the user hovers, the line below the text expands to its full width. */
+}
+
+/* Light and Dark Mode Buttons: */
+/* This styles the dark mode button within my Web Development Personal Portfolio Website. */
+.Web-Dev-Portfolio-Dark-Mode-Button {
+    display: flex;
+    margin-top: 1px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: 2.9s;
+}
+/* This styles the icon. */
+.Web-Dev-Portfolio-Dark-Mode-Button .Dark-Mode-Button {
+    color: white;
+    font-size: 28px;
+}
+
+/* This styles the sun and moon icons when hovered in light mode. */
+.Light-Mode-Colors .bx-moon:hover,
+.Light-Mode-Colors .bx-sun:hover {
+    color: rgb(255, 255, 0); /* The sun's color changes into yellow when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+/* This styles the sun and moon icons when hovered in dark mode. */
+.Dark-Mode-Colors .bx-sun:hover,
+.Dark-Mode-Colors .bx-moon:hover {
+    color: rgb(204, 204, 204); /* The moon's color changes into gray when hovered. */
+    transform: scale(2.1); /* This enlarges the icon on hover for emphasis. */
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* To make the transition for the color and size change smooth. */
+}
+
+
+
+/* Styling for the contents of the Projects Page: */
+/* This styles the entire container of the Projects Section of my Website. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container { 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: var(--Background-Color-Change);
+    margin-bottom: 36px;
+}
+
+/* This styles the input elements that are within the Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input {
+    appearance: none;
+}
+
+/* This styles the all the button elements within the Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Button {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin-top: 760px;
+    gap: 8px;
+}
+
+/* This styles the all the button elements that is within the button container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Button label {
+    height: 20px;
+    width: 20px;
+    background: white;
+    border-radius: 25%;
+    border: 3px solid var(--Maroon-Color);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* This styles the labels that is within the button container when they are hovered. */
+.Project-Button label:hover {
+    transform: scale(1.2);
+}
+
+/* This styles all the labels that are linked to the checked input elements. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(1):checked ~ .Project-Button label:nth-child(1),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(2):checked ~ .Project-Button label:nth-child(2), 
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(3):checked ~ .Project-Button label:nth-child(3),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(4):checked ~ .Project-Button label:nth-child(4), 
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(5):checked ~ .Project-Button label:nth-child(5),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(6):checked ~ .Project-Button label:nth-child(6) {
+    opacity: 1;
+}
+
+/* This styles the transition effect for the container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+/* This styles the movement of the transition effect for the container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--img);
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    clip-path: circle(0% at 0% 50%);
+    transition: 1.5s;
+}
+
+/* This styles the video element that is within the Project-Transition-Effect-Movement video container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* This styles the play button for the video element that is within the Project-Transition-Effect-Movement video container. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement video::-webkit-media-controls-play-button {
+    color: white;
+    background-color: var(--Maroon-Color);
+    border-radius: 50%
+}
+
+/* This styles the play button for the video element that is within the Project-Transition-Effect-Movement video container when hovered. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement video::-webkit-media-controls-play-button:hover {
+    background-color: var(--Maroon-Color);
+}
+
+/* This styles the movement of the transition effect. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(even) {
+    clip-path: circle(0% at 100% 50%); /* Applying a circular clipping path starting from the right */
+}
+
+/* This styles the movement of the transition effect based on checked input elements. */
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(1):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(1),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(2):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(2),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(3):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(3),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(4):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(4),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(5):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(5),
+.Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(6):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(6) {
+    clip-path: circle(150% at 50% 50%);
+    transition-delay: 1s;
+}
+
+/* Styling for the Explore Buttons: */
+.Explore-Project-Button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* This styles the buttons that is within the "Explore-Project-Button" container. */
+.Explore-Project-Button button{
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.3s;
+    font-weight: 400;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    border: 2px solid var(--Maroon-Color);
+}
+
+/* This adds hover effects to the buttons that is within the "Explore-Project-Button" container. */
+.Explore-Project-Button button:hover{
+    color: white;
+    background: rgba(73, 48, 54, 255);
+    transform: scale(1.2);
+}
+
+/* This styles the h1 elements in the "My-Projects-Text" container. */
+.My-Projects-Text h1{
+    text-align: center;
+    font-size: 65px;
+    margin-top: 120px;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: .7s;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: var(--Maroon-Color);
+    padding: 20px;
+    z-index: 100;
+}
+
+/* The following lines are the Keyframe animations: */
+/* Keyframe animation for sliding in from the right. */
+@keyframes slideTransitionFromRight {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(100px); /* It moves it 100px to the right. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for sliding in from the left. */
+@keyframes slideTransitionFromLeft {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateX(-100px); /* It moves it 100px to the left. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for sliding in from the top. */
+@keyframes slideTransitionFromTop {
+    0% {
+        opacity: 0; /* It has an opacity of 0 at the start. */
+        transform: translateY(100px); /* It moves it down by 100px. */
+    }
+    100% {
+        opacity: 1; /* It has an opacity of 1 at the end. */
+        transform: translateY(0); /* It moves back to its original position. */
+    }
+}
