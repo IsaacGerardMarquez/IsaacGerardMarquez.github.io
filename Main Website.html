@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-HomePage.css">
     <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-AboutMePage.css">
     <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-CredentialsPage.css">
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-ProjectsPage.css">
 
     <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -26,7 +27,7 @@
             <a href="/Main Website.html" style="--i:10;" class="active">Home</a>
             <a href="Website-Pages/Web-Dev-Portfolio-AboutMePage.html" style="--i:11;">About Me</a>
             <a href="Website-Pages/Web-Dev-Portfolio-CredentialsPage.html" style="--i:12;">Credentials</a>
-            <a href="" style="--i:13;">Projects</a>
+            <a href="Website-Pages/Web-Dev-Portfolio-ProjectsPage.html" style="--i:13;">Projects</a>
             <a href="" style="--i:14;">Contact</a>
         </nav>
 
@@ -158,6 +159,41 @@
         </div>
 
     </div>
+
+    <!-- My Recent Projects Section of the Website-->
+    <div class="My-Projects-Text"><h1>My Recent<span> Projects</span></h1></div>
+    <div class="Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container">
+        <input id="Project1" type="radio" name="group" checked>
+        <input id="Project2" type="radio" name="group">
+        <input id="Project3" type="radio" name="group">
+        <input id="Project4" type="radio" name="group">
+        <input id="Project5" type="radio" name="group">
+        <input id="Project6" type="radio" name="group">
+        <div class="Project-Button">
+            <label for="Project1"></label>
+            <label for="Project2"></label>
+            <label for="Project3"></label>
+            <label for="Project4"></label>
+            <label for="Project5"></label>
+            <label for="Project6"></label>
+        </div>
+        <!-- These are the images annd video of my Recent Projects that would be shown using a slider. -->
+        <div class="Project-Transition-Effect">
+            <div class="Project-Transition-Effect-Movement" for="Project1" style="--img:url('/Images/Twine Story.png')">
+            <div class="Explore-Project-Button"><a href="https://isaacgerardmarquez.itch.io/the-turtle-and-the-monkey-a-filipino-folktale" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project2" style="--img:url('/Images/Bitsy Game.png')">
+            <div class="Explore-Project-Button"><a href="https://isaacgerardmarquez.itch.io/coffees-maze-escapade" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project3" style="--img:url('/Images/Digital Story Experience.png')">
+            <div class="Explore-Project-Button"><a href="https://youtu.be/BgV_q5QPhH0" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project4"><video src="/Videos/The Walkthrough Demo of Isaac’s Vending Machine Program.mp4" controls loop></video>
+            <div class="Explore-Project-Button"><a href="https://github.com/Bath-Spa-Students/utility-app-IsaacGerardMarquez.git" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project5" style="--img:url('/Images/More Python Projects.png')">
+            <div class="Explore-Project-Button"><a href="https://github.com/Bath-Spa-Students/programming-skills-portfolio-IsaacGerardMarquez.git" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project6" style="--img:url('/Images/More Web Development Projects.png')">
+            <div class="Explore-Project-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez.git" target="_blank"><button>Explore</button></a></div></div>
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer>Copyright &copy; 2024 | Personal Portfolio | Made by: Isaac Gerard S. Marquez</footer>
