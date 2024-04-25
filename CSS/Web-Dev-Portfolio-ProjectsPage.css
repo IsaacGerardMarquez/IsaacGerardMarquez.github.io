@@ -225,7 +225,7 @@ body {
 
 /* This styles the movement of the transition effect. */
 .Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(even) {
-    clip-path: circle(0% at 100% 50%); /* Applying a circular clipping path starting from the right */
+    clip-path: circle(0% at 100% 50%); /* This applies a circular clipping path that starts from the right. */
 }
 
 /* This styles the movement of the transition effect based on checked input elements. */
@@ -235,7 +235,7 @@ body {
 .Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(4):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(4),
 .Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(5):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(5),
 .Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container input:nth-child(6):checked ~ .Project-Transition-Effect .Project-Transition-Effect-Movement:nth-child(6) {
-    clip-path: circle(150% at 50% 50%);
+    clip-path: circle(150% at 50% 50%); /* A circular clipping path expands from the center. */
     transition-delay: 1s;
 }
 
