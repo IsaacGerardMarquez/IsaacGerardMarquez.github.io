@@ -309,6 +309,104 @@ span {
     color: #333;
 }
 
+/* This styles the graph that shows my current skills. */
+/* This styles the Isaac-Current-Skils container. */
+.Isaac-Current-Skils {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* This styles the h1 element within the Isaac-Current-Skils container. */
+.Isaac-Current-Skils h1{
+    color: var(--Maroon-Color);
+    font-size: 60px;
+    font-weight: 1000;
+    margin-right: 240px;
+    margin-bottom: 20px;
+}
+
+/* This styles the Isaac-Current-Skils-Progress-Bar container. */
+.Isaac-Current-Skils .Isaac-Current-Skils-Progress-Bar {
+    width: 100%;
+    margin: 25px 0;
+}
+
+/* This styles the Isaac-Current-Skils-Language container. */
+.Isaac-Current-Skils-Progress-Bar .Isaac-Current-Skils-Language {
+    display: block;
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--Maroon-Color);
+}
+
+/* This styles the Isaac-Current-Skils-Progress-Bar-Graph container. */
+.Isaac-Current-Skils-Progress-Bar .Isaac-Current-Skils-Progress-Bar-Graph {
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* This styles the progress bar. */
+.Isaac-Current-Skils-Progress-Bar-Graph .Isaac-Current-Skils-Progress-Bar {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 15px;
+    background: var(--Maroon-Color);
+    animation: movementOfProgressBar 5.2s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* The following lines are the styling used for the progress bar for each programming language. */
+/* Python */
+.Isaac-Current-Skils-Progress-Bar.Python {
+    width: 70%;
+    animation-delay: 0.4s;
+}
+
+/* HTML */
+.Isaac-Current-Skils-Progress-Bar.HTML {
+    width: 90%;
+    animation-delay: 0.4s;
+}
+
+/* CSS */
+.Isaac-Current-Skils-Progress-Bar.CSS {
+    width: 80%;
+    animation-delay: 0.4s;
+}
+
+/* JavaScript */
+.Isaac-Current-Skils-Progress-Bar.JavaScript {
+    width: 60%;
+    animation-delay: 0.6s;
+}
+
+/* This styles the percentage for each skill. */
+.Isaac-Current-Skils-Progress-Bar .Skills-Percentage {
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    padding: 4px 3px;
+    border-radius: 3px;
+    background: var(--Maroon-Color);
+    z-index: 1;
+}
+
 
 /* Footer */
 footer {
@@ -345,5 +443,17 @@ footer {
     100% {
         opacity: 1; /* It has an opacity of 1 at the end. */
         transform: translateX(0); /* It moves back to its original position. */
+    }
+}
+
+/* Keyframe animation for the movement of the progress bar. */
+@keyframes movementOfProgressBar {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
