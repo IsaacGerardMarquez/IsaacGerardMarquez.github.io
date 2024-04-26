@@ -327,7 +327,7 @@ body {
     right: 0;
     width: 35%;
     height: auto;
-    padding-top: 238px;
+    padding-top: 245px;
     z-index: 1; /* To make sure that the image is in the front.  */
 }
 
