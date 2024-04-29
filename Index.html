@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS/Stylesheets -->
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-HomePage.css">
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-AboutMePage.css">
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-CredentialsPage.css">
+    <link rel="stylesheet" href="CSS/Web-Dev-Portfolio-ProjectsPage.css">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+    <title>Isaac Marquez's Web Development Portfolio</title>
+</head>
+<body class="Light-Mode-Colors">
+
+    <!-- Navigation Menu -->
+    <header class="Web-Dev-Portfolio-Header">
+        <a href="/Main Website.html" class="Web-Dev-Portfolio-Logo">IsaacPortfolio</a>
+
+        <nav class="Web-Dev-Portfolio-Navigation-Menu">
+            <a href="/Main Website.html" style="--i:10;" class="active">Home</a>
+            <a href="Website-Pages/Web-Dev-Portfolio-AboutMePage.html" style="--i:11;">About Me</a>
+            <a href="Website-Pages/Web-Dev-Portfolio-CredentialsPage.html" style="--i:12;">Credentials</a>
+            <a href="Website-Pages/Web-Dev-Portfolio-ProjectsPage.html" style="--i:13;">Projects</a>
+            <a href="" style="--i:14;">Contact</a>
+        </nav>
+
+        <!-- Light and Dark Mode Buttons -->
+        <div class="Web-Dev-Portfolio-Dark-Mode-Button">
+            <i class='bx bx-sun Dark-Mode-Button'></i>
+        </div>
+    </header>
+
+    <!-- Home-page Section of the Website -->
+    <section class="HomePage">
+        <div class="HomePage-Contents">
+            <h2>Hello, I am</h2>
+            <h1>Isaac Marquez</h1>
+            <p>Welcome to my Web Development Portfolio! On this website, I will mainly showcase my background, my credentials and certificates, and my accomplishments and recent projects.<br><br>I decided to create a portfolio to display and demonstrate the skills, knowledge, and experience I have with website development and different programming languages. And by having a portfolio that I can use in the future, I can show my future employers my progress and evolution as a Website developer, allowing them to see not only my current skills but also further potential for any future projects and opportunities that I may receive. This Web Development Portfolio will serve as a tool I can use to help me accomplish my goals and advance my future career in the ever-evolving world of web development.</p>
+             
+            <!-- Contact icons that can be clicked so that they can be redirected to contact me. -->
+            <div class="Contacts-Icons">
+                <a href="https://www.facebook.com/profile.php?id=100056264744414&mibextid=eQY6cl" style="--i:5;" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/yzach.grd?igsh=bzIwYTdpeXJjbDdt&utm_source=qr" style="--i:6;" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.youtube.com/@IsaacMarquez_BathSpaRAK" style="--i:7;" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://www.linkedin.com/in/isaac-marquez-0139812a9" style="--i:8;" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="mailto:isaacbathspa@gmail.com" style="--i:9;" target="_blank"><i class='bx bxl-gmail' ></i></a>
+            </div>
+
+            <!-- A button that, when clicked, would direct the user to the About Me section. -->
+            <a href="/Website-Pages/Web-Dev-Portfolio-AboutMePage.html" class="About-Me-Button">About Me</a>
+        </div>
+
+        <!-- I created multiple divs for the rotating texts that would show some of my titles. -->
+        <div class="Isaac-Titles-Container">
+            <div class="Isaac-Titles-Box">
+                <div class="Isaac-Titles" style="--i:1;">
+                    <i class='bx bx-code-alt'></i>
+                    <h1 class="Rotating-Isaac-Titles">Web Developer</h1>
+                </div>
+                <div class="Isaac-Titles" style="--i:2;">
+                    <i class='bx bx-laptop'></i>
+                    <h1 class="Rotating-Isaac-Titles">Web Designer</h1>
+                </div>
+                <div class="Isaac-Titles" style="--i:3;">
+                    <i class='bx bx-music'></i>
+                    <h1 class="Rotating-Isaac-Titles">Musician</h1>
+                </div>
+                <div class="Isaac-Titles" style="--i:4;">
+                    <i class='bx bx-game'></i>
+                    <h1 class="Rotating-Isaac-Titles">Game Developer</h1>
+                </div>
+
+                <div class="Isaac-Titles-Rotating-Circle"></div>
+            </div>
+
+            <div class="Isaac-Titles-Overlay"></div>
+        </div>
+
+        <!-- This is the image I used for the home-page. -->
+        <div class="Home-Page-IMG">
+            <img src="Images/Isaac Marquez.png" alt="Isaac Marquez's Image">
+        </div>
+    </section>
+
+
+    <!-- About Me-page Section of the Website -->
+    <section class="Web-Dev-Portfolio-AboutMe">
+        <div class="Web-Dev-Portfolio-AboutMe-Main-Content">
+            <img src="Images/Isaac Marquez About Me.png" alt="Isaac Marquez's Photo ">
+            <div class="Web-Dev-Portfolio-AboutMe-Content">
+                <h1>About <span>Me</span></h1>
+                <h5>Creative Computing</h5>
+                <p>Name: Isaac Gerard Senoy Marquez<br>Age: 19<br>Date of Birth: January 25, 2005<br>Civil Status: Single<br>Nationality: Filipino<br>Languages Spoken: English, Tagalog &#40;Filipino&#41;, & Hiligaynon<br>Address: Al Qulaya'ah, Sharjah, United Arab Emirates<br>Programming Languages: Python, HTML, CSS, JavaScript</p>
+
+                <!-- These are clickable texts that, when clicked, open a tab that would show my trivia information in the given category. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias">
+                    <p class="Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac active-link" onclick="opentab(event, 'Hobbies')">Hobbies</p>
+                    <p class="Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac" onclick="opentab(event, 'Education')">Education</p>
+                    <p class="Web-Dev-Portfolio-AboutMe-Trivias-AboutIsaac" onclick="opentab(event, 'Goals')">Goals</p>
+                </div>
+                
+                <!-- This is the Hobbies category that details trivial information about my hobbies. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias-Infos" id="Hobbies">
+                    <ul>
+                        <li><span>Music</span><br>Guitar<br>Ukelele<br>Piano<br>Singing</li>
+                        <li><span>Sports</span><br>Basketball<br>Volleyball<br>Football<br>Badminton</li>
+                        <li><span>Art</span><br>Photography<br>Painting<br>Drawing<br>Videography</li>
+                    </ul>
+                </div>
+                
+                <!-- This is the Education category that would show where I studied from the Elementary level to where I'm currently in and my educational achievements. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias-Infos" id="Education">
+                    <ul>
+                        <li><span>Elementary School</span><br>Binalbagan Elementary School <span>&#40;2011-2015&#41;</span><br>- Honor Student<br>Home-school Global/ The Master’s Academy <span>&#40;2015-2017&#41;</span><br>- Elementary Diploma - Honor Student</li>
+                        <li><span>Junior High School</span><br>Home-school Global/ The Master’s Academy <span>&#40;2017-2020&#41;</span><br> Honor Student<br>AMA University Online Education (AMA OEd) <span>&#40;2020-2021&#41;</span><br> Junior High School Diploma (Completion) - High Honor Student - Valedictorian</li>
+                        <li><span>Senior High School</span><br>Vian Rechel Academy <span>&#40;2021-2023&#41;</span><br> Highest Honor Student - Valedictorian - Best in Research</li>
+                        <li><span>University</span><br>Bath Spa University <span>&#40;2023-2026&#41;</span><br>Currently taking BSc (Hons) Creative Computing. </li>
+                    </ul>
+                </div>
+                
+                <!-- This is the Goals category, in which I stated some of my current goals. -->
+                <div class="Web-Dev-Portfolio-AboutMe-Trivias-Infos" id="Goals">
+                    <ul>
+                        <li>- Acquire BSc (Hons) Creative Computing Degree<br>- Acquire MSc (Hons) Creative Computing Degree<br>- Certificate of Academic Excellence<br>- "A" Grade in all Semesters<br>- Gain practical experience through Internships<br>- Secure a Web Developer Position in a reputable company.</li>
+                    </ul>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials-page Section of the Website -->
+    <div class="My-Credentials-Text"><h1>My <span>Credentials</span></h1></div>
+
+    <div class="Web-Dev-Portfolio-CredentialsPage-Container">
+
+        <!-- These are the images of my Sololearn Certificates that would be shown using a slider. -->
+        <div class="Web-Dev-Portfolio-CredentialsPage-SlidingImage">
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Web\ Development\ \(Sololearn\).jpg);"></div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/SoloLearn\ \(Python\ Introduction\).jpg);"></div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Sololearn\ \(Python\ Intermediate\).jpg);"></div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Python\ Developer.jpg);"></div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Introduction\ to\ HTML.jpg);"> </div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Introduction\ to\ CSS.jpg);"> </div>
+            <div class="Web-Dev-Portfolio-CredentialsPage-Images" style="background-image: url(Images/Introduction\ to\ JavaScript.jpg);"></div>
+        </div>
+
+        <!-- These are the back and next buttons that the user can click to go back to the previous image or go next to another image. -->
+        <div class="backAndnextButton">
+            <button class="goBackbutton"><i class="bx bx-left-arrow"></i></button>
+            <button class="goNextbutton"><i class='bx bx-right-arrow'></i></button>
+        </div>
+
+    </div>
+
+    <!-- My Recent Projects Section of the Website-->
+    <div class="My-Projects-Text"><h1>My Recent<span> Projects</span></h1></div>
+    <div class="Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container">
+        <input id="Project1" type="radio" name="group" checked>
+        <input id="Project2" type="radio" name="group">
+        <input id="Project3" type="radio" name="group">
+        <input id="Project4" type="radio" name="group">
+        <input id="Project5" type="radio" name="group">
+        <input id="Project6" type="radio" name="group">
+        <div class="Project-Button">
+            <label for="Project1"></label>
+            <label for="Project2"></label>
+            <label for="Project3"></label>
+            <label for="Project4"></label>
+            <label for="Project5"></label>
+            <label for="Project6"></label>
+        </div>
+        <!-- These are the images annd video of my Recent Projects that would be shown using a slider. -->
+        <div class="Project-Transition-Effect">
+            <div class="Project-Transition-Effect-Movement" for="Project1" style="--img:url('/Images/Twine Story.png')">
+            <div class="Explore-Project-Button"><a href="https://isaacgerardmarquez.itch.io/the-turtle-and-the-monkey-a-filipino-folktale" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project2" style="--img:url('/Images/Bitsy Game.png')">
+            <div class="Explore-Project-Button"><a href="https://isaacgerardmarquez.itch.io/coffees-maze-escapade" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project3" style="--img:url('/Images/Digital Story Experience.png')">
+            <div class="Explore-Project-Button"><a href="https://youtu.be/BgV_q5QPhH0" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project4"><video poster="/Images/The Walkthrough Demo of Isaac’s Vending Machine Program.png" controls loop> <!-- Poster image --> <!-- "controls loop" is used to loop the video. -->
+            <source src="/Videos/The Walkthrough Demo of Isaac’s Vending Machine Program.mp4" type="video/mp4"></video><!-- Video -->
+            <div class="Explore-Project-Button"><a href="https://github.com/Bath-Spa-Students/utility-app-IsaacGerardMarquez.git" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project5" style="--img:url('/Images/More Python Projects.png')">
+            <div class="Explore-Project-Button"><a href="https://github.com/Bath-Spa-Students/programming-skills-portfolio-IsaacGerardMarquez.git" target="_blank"><button>Explore</button></a></div></div>
+            <div class="Project-Transition-Effect-Movement" for="Project6" style="--img:url('/Images/More Web Development Projects.png')">
+            <div class="Explore-Project-Button"><a href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-IsaacGerardMarquez.git" target="_blank"><button>Explore</button></a></div></div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>Copyright &copy; 2024 | Personal Portfolio | Made by: Isaac Gerard S. Marquez</footer>
+
+    <script src="JavaScript/Web-Development-Portfolio.js"></script>
+</body>
+</html>
