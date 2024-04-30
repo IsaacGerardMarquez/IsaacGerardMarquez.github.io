@@ -293,7 +293,7 @@ body {
 /* These are the styles used for the icons and rotating titles when in  dark mode. */
 .Dark-Mode-Colors .bx-code-alt,
 .Dark-Mode-Colors .bx-laptop,
-.Dark-Mode-Colors .bx-music,
+.Dark-Mode-Colors .bxl-javascript,
 .Dark-Mode-Colors .bx-game,
 .Dark-Mode-Colors .Rotating-Isaac-Titles {
     color: white;
