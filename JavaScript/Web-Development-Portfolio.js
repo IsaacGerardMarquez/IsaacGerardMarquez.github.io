@@ -43,3 +43,20 @@ document.querySelector('.goBackbutton').addEventListener('click', function() {
     // This prepends the last image to the start of the image slider.
     document.querySelector('.Web-Dev-Portfolio-CredentialsPage-SlidingImage').prepend(document.querySelectorAll('.Web-Dev-Portfolio-CredentialsPage-Images')[5]);
 });
+
+
+// Reading Progress Bar
+// This gets the element that represents the reading progress bar.
+const ReadingProgressBar = document.getElementById("ReadingProgressBar");
+
+// I added an event listener to the window for any scroll events.
+window.addEventListener("scroll", () => {
+    // This calculates the scroll distance from the top of the document.
+    const scrollDistanceForReadingProgressBar = document.documentElement.scrollTop || document.body.scrollTop;
+
+    // This is calculated by dividing the percentage of how far the user has already scrolled in the webpage to the total distance that is scrollable.
+    const widthOfReadingProgressBar = (scrollDistanceForReadingProgressBar / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+    // This sets the width of the reading progress bar element which would display the calculated width.
+    ReadingProgressBar.style.width = widthOfReadingProgressBar + "%";
+});
