@@ -394,6 +394,7 @@ body {
 .FooterAtBottom-Icon-Container .ContactIcon span{
   height: 60px;
   width: 60px;
+  color: var(--Maroon-Color);
   background: white;
   box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
   z-index: 2;
