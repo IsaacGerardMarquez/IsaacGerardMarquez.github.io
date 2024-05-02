@@ -60,3 +60,14 @@ window.addEventListener("scroll", () => {
     // This sets the width of the reading progress bar element which would display the calculated width.
     ReadingProgressBar.style.width = widthOfReadingProgressBar + "%";
 });
+
+
+// GoBackToTopButton: This is the button that, when clicked, brings the user back to the top of the webpage.
+// This selects the element with the class "GoBackToTopButton" and assigns it to the variable GoBackToTopButton.
+const GoBackToTopButton = document.querySelector(".GoBackToTopButton");
+
+// I added a scroll event listener to the window object.
+window.addEventListener("scroll", () => {
+    // If the vertical scroll position is more than 100 pixels, this toggles the GoBackToTopButton element's "active" class.
+    GoBackToTopButton.classList.toggle("active", window.pageYOffset > 100);
+});
