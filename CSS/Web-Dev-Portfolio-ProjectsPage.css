@@ -487,7 +487,7 @@ body {
   text-align: center;
   margin: 0 30px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* This styles the contact icon container. */
@@ -497,7 +497,7 @@ body {
   color: var(--Maroon-Color);
   background: white;
   box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
-  z-index: 2;
+  z-index: 1;
 }
 
 /* This styles all of the anchor tags within the contact icon. */
