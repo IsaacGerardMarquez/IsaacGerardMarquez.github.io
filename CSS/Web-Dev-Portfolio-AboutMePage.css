@@ -417,134 +417,136 @@ span {
 }
 
 /* This styles the logo in the footer. */
-.FooterAtBottom-Logo a {
-  text-decoration: none;
+.FooterAtBottom-Logo {
+    text-align: center;
+    margin-top: 25px;
+    animation: slideTransitionFromRight 1s ease forwards;
 }
 
-.FooterAtBottom-Logo h1{
-  color: white;
-  text-align: center;
-  margin-top: 30px;
-  cursor: pointer;
-  animation: slideTransitionFromRight 1s ease forwards;
+.FooterAtBottom-Logo a{
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* This styles the logo in the footer when hovered. */
-.FooterAtBottom-Logo h1:hover {
-  transform: scale(1.2);
-  animation: none; /* To disable the animation on hover. */
+.FooterAtBottom-Logo:hover {
+    transform: scale(1.2);
+    animation: none;
 }
 
 /* This styles the FooterAtBottom-Icon-Container container. */
 .FooterAtBottom-Icon-Container{
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  flex-wrap: wrap;
-  margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    margin-top: 80px;
 }
 
 /* The following lines styles each contact icon in the footer. */
 .FooterAtBottom-Icon-Container .ContactIcon{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  text-align: center;
-  margin: 0 30px;
-  cursor: pointer;
-  z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    margin: 0 30px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 /* This styles the contact icon container. */
 .FooterAtBottom-Icon-Container .ContactIcon span{
-  height: 60px;
-  width: 60px;
-  color: var(--Maroon-Color);
-  background: white;
-  box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
-  z-index: 1;
+    height: 60px;
+    width: 60px;
+    color: var(--Maroon-Color);
+    background: white;
+    box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+    z-index: 1;
 }
 
 /* This styles all of the anchor tags within the contact icon. */
 .FooterAtBottom-Icon-Container .ContactIcon span a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* This styles all of the icon within the contact icon. */
 .FooterAtBottom-Icon-Container .ContactIcon span i{
-  font-size: 25px;
-  line-height: 60px;
-  text-decoration: none;
+    font-size: 25px;
+    line-height: 60px;
+    text-decoration: none;
 }
 
 /* The following lines styles the pop-up box when hovering over the contact icons. */
 .FooterAtBottom-Icon-Container .ContactIcon .ContactIconPop-Up{
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  font-size: 20px;
-  font-weight: 900;
-  color: white;
-  background: white;
-  box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
-  padding: 10px 19px;
-  pointer-events: none;
-  transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    background: white;
+    box-shadow: 0px 15px 15px rgba(0,1,0.4,0.1);
+    padding: 10px 19px;
+    pointer-events: none;
+    transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+    z-index: 1;
 }
 
 .FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
-  top: -60px;
-  opacity: 1;
-  pointer-events: auto;
+    top: -60px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* This styles the arrow of the pop-up box. */
 .ContactIcon .ContactIconPop-Up:before{
-  position: absolute;
-  content: "";
-  height: 17px;
-  width: 17px;
-  background: white;
-  left: 50%;
-  bottom: -9px;
-  transform: translateX(-50%) rotate(45deg);
-  transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    background: white;
+    left: 50%;
+    bottom: -9px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.4s cubic-bezier(0.65, -0.58, 0.254, 1.58);
 }
 
 /* This styles the color of the icon when hovering over the contact icon. */
 .FooterAtBottom-Icon-Container .ContactIcon:hover span{
-  color: white;
+    color: white;
 }
 
 /* This adds a text shadow effect when hovered. */
 .FooterAtBottom-Icon-Container .ContactIcon:hover span,
 .FooterAtBottom-Icon-Container .ContactIcon:hover .ContactIconPop-Up{
-  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
 }
 
 /* This styles the background of the Facebook contact icon when hovered. */
 .FooterAtBottom-Icon-Container .Facebook:hover span,
 .FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up,
 .FooterAtBottom-Icon-Container .Facebook:hover .ContactIconPop-Up:before{
-  background: #1877F2;
+    background: #1877F2;
 }
 
 /* This styles the background of the Instagram contact icon when hovered. */
 .FooterAtBottom-Icon-Container .Instagram:hover span,
 .FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up,
 .FooterAtBottom-Icon-Container .Instagram:hover .ContactIconPop-Up:before{
-  background: #C13584;
+    background: #C13584;
 }
 
 /* This styles the background of the YouTube contact icon when hovered. */
 .FooterAtBottom-Icon-Container .YouTube:hover span,
 .FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up,
 .FooterAtBottom-Icon-Container .YouTube:hover .ContactIconPop-Up:before{
-  background: #FF0000;
+    background: #FF0000;
 }
 
 /* This styles the background of the LinkedIn contact icon when hovered. */
@@ -558,34 +560,34 @@ span {
 .FooterAtBottom-Icon-Container .Gmail:hover span,
 .FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up,
 .FooterAtBottom-Icon-Container .Gmail:hover .ContactIconPop-Up:before{
-  background: 	#B23121;
+    background: 	#B23121;
 }
 
 /* The following lines styles the navigation menu in the footer. */
 .FooterAtBottom-NavigationMenu{
-  margin: 30px;
+    margin: 30px;
 }
 
 /* This styles the unorder list for the navigation menu list in the footer. */
 .FooterAtBottom-NavigationMenu ul{
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
 }
 
 /* This styles each of the navigational menu item link in the footer. */
 .FooterAtBottom-NavigationMenu ul li a{
-  font-size: 20px;
-  color:white;
-  margin: 15px;
-  text-decoration: none;
-  opacity: 0.5;
-  transition: 0.9s;
+    font-size: 20px;
+    color:white;
+    margin: 15px;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: 0.9s;
 }
 
 /* This styles the navigation menu when hovered. */
 .FooterAtBottom-NavigationMenu ul li a:hover{
-  opacity: 1000;
+    opacity: 1000;
 }
 
 
