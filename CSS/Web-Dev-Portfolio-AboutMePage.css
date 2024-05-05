@@ -309,6 +309,20 @@ span {
     color: #333;
 }
 
+
+/* This styles the AboutMeDescription container, which introduces me in the About Me Section. */
+.AboutMeDescription {
+    margin: 30px 120px 140px 120px;
+    text-align: left;
+    font-size: 25px;
+}
+
+/* This styles the span elements in the AboutMeDescription container. */
+.AboutMeDescription span {
+    color: rgba(73,48,54,255);
+    font-size: 44px;
+}
+
 /* This styles the graph that shows my current skills. */
 /* This styles the Isaac-Current-Skils container. */
 .Isaac-Current-Skils {
