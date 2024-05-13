@@ -123,8 +123,168 @@ body {
 }
 
 
-
 /* Styling for the contents of the Projects Page: */
+/* This styles the h1 elements in the "My-Projects-Text" container. */
+.My-Projects-Text h1{
+    text-align: center;
+    font-size: 65px;
+    margin-top: 120px;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slideTransitionFromRight 1s ease forwards;
+    animation-delay: .7s;
+
+}
+
+.My-Projects-Container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    min-height: 75vh;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .My-Projects-Container-Contents {
+    position: relative;
+    background: var(--Maroon-Color);
+    margin-top: 15px;
+    margin-right: 20px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .My-Projects-Container-Contents img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .My-Projects-Container-Contents p {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+  }
+  
+  .My-Projects-Container-Contents .My-Projects-Container-ProgrammingLanguageUsed {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+  }
+  
+
+  .My-Projects-Container-Contents:hover .My-Projects-Container-Contents-Box {
+    transform: translateY(0);
+  }
+  
+  .My-Projects-Container-Contents-Box {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: var(--Maroon-Color);
+    transform: translateY(100%);
+    height: calc(125% - 35px); 
+    transition: all 0.6s ease-in-out;
+    opacity: 0.9;
+  }
+
+  .My-Projects-Container-Contents-Box p{
+    font-size: 19px;
+    font-weight: 1000;
+    color: white;
+    margin-bottom: 180px;
+  }
+
+  .My-Projects-Container-ProgrammingLanguageUsed p {
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+    margin-top: 30px;
+  }
+
+  .My-Projects-Container-Contents-Box button {
+    background: none;
+    outline: none;
+    border: 1px solid white;
+    padding: 9px;
+    cursor: pointer;
+  }
+  
+  .My-Projects-Container-Contents-Box button:hover {
+    transition: all 0.3s ease-in-out;
+    background: white;
+    color: var(--Maroon-Color);
+    transform: scale(1.05);
+    letter-spacing: 5px;
+  }
+  
+  .My-Projects-Container-Contents-Close {
+    background: rgba(55, 44, 44, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    z-index: 3;
+  }
+  
+  .My-Projects-Container-Contents-Close.openPopUpImage {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .My-Projects-Container-Contents-Close-Content {
+    position: relative;
+    width: 990px;
+  }
+
+  .My-Projects-Container-Contents-Close-Content img {
+    display: block;
+    max-width: 100%;
+}
+
+.My-Projects-Container-Contents-View-Button {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.My-Projects-Container-Contents-Explore-Button button{
+  color: white;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  background: none;
+  font-size: 50px;
+  color: var(--Maroon-Color);
+  top: 5px;
+  right: 19px;
+  border: 0;
+}
+  
+.close:hover {
+  color: white;
+  transition: all 0.3s ease-in-out;
+  scale: 1.2;
+}
+
+
+/* The following lines are for the styling of the additional recent projects. */
 /* This styles the entire container of the Projects Section of my Website. */
 .Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container { 
     position: relative;
@@ -267,178 +427,12 @@ body {
     transform: scale(1.2);
 }
 
-/* This styles the h1 elements in the "My-Projects-Text" container. */
-.My-Projects-Text h1{
-    text-align: center;
-    font-size: 65px;
-    margin-top: 120px;
-    margin-bottom: 15px;
-    opacity: 0;
-    animation: slideTransitionFromRight 1s ease forwards;
-    animation-delay: .7s;
-}
 
 
 
-/* The following lines are for the styling of the additional recent projects. */
-/* This styles the container for all of my additional recent projects. */
-.More-Projects-Container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
-    margin: 0 12px 60px 12px;
-}
-  
-/* This styles each box that is used for the projects. */
-.More-Projects-Box {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;    
-    height: 200px;
-    width: 350px;
-    background-color: var(--Maroon-Color);
-    overflow: hidden;
-    perspective: 400px;
-    margin-bottom: 25px;
-}
-
-/* This styles the container that is used for the images of the additional projects. */
-.More-Projects-Images-Container {
-    height: 100%;
-    width: 100%;
-}
-  
-/* This styles all of the images in the More-Projects-Box container. */
-.More-Projects-Box img {
-    height: 100%;
-    width: 100%;
-    transition: all 1.2s cubic-bezier(0.169, 0.829, 0.36, 1.249);
-}
-
-/* This styles all of the images in the More-Projects-Box container when hovered. */
-.More-Projects-Box:hover {
-    color: white;
-    transform: scale(1.09);
-    box-shadow: 0 10px 12px black;
-}
-  
-/* This styles the content inside the box. */
-.More-Projects-Box-Contents {
-    position: absolute;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--Maroon-Color);
-    padding: 20px;
-    transform: rotateX(-90deg);
-    transform-origin: bottom;
-    transition: all 1.2s cubic-bezier(0.169, 0.829, 0.36, 1.249);
-}
-  
-/* This reveals the content when the user hovers over it. */
-.More-Projects-Box:hover .More-Projects-Box-Contents {
-    transform: rotateX(0deg);
-}
-
-/* This hides the image when hovering over the box. */
-.More-Projects-Box:hover img {
-    scale: 0;
-}  
-
-/* This styles the title of each project. */
-.More-Projects-Box-Contents-Project-Title {
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-}  
-  
-/* This styles the description of each project. */
-.More-Projects-Box-Contents-Project-Description p{
-    color: white;
-}
-
-.More-Projects-Box-Contents-Project-Description span {
-    font-size: 14px;
-}
 
 
-/* The following lines styles the Explore Button: */
-/* This styles the More-Projects-ExploreButton-Container Container. */
-.More-Projects-ExploreButton-Container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
 
-/* This styles the More-Projects-ExploreButton-Container Container when hovered. */
-.More-Projects-ExploreButton-Hover {
-    display: flex;
-    height: fit-content;
-    width: fit-content;
-    border: 2px white solid;
-}
-  
-/* This styles the More-Projects-ExploreButton-Hover-GitHubLogo container. */
-.More-Projects-ExploreButton-Hover-GitHubLogo {
-    background-color: white;
-    padding: 10px 10px 5px 10px;
-}
-  
-/* This styles the GitHub Logo. */
-.More-Projects-ExploreButton-Hover-GitHubLogo svg {
-    height: 26px;
-    width: 26px;
-}
-  
-/* This styles the Explore button. */
-.More-Projects-ExploreButton {
-    height: 20px;
-    width: 210px;
-    transition:  0.6s;
-    transform-style: preserve-3d;
-}
-
-/* This rotates the Explore button when hovered. */
-.More-Projects-ExploreButton-Hover:hover .More-Projects-ExploreButton {
-    transform: rotateX(90deg);
-}
-  
-/* This styles the content inside the Explore Button. */
-.More-Projects-ExploreButton-Content {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
-    width: 210px;
-    font-size: 18px;
-}
-
-/* This styles the text "Explore". */
-.ExploreText {
-    color: white;
-    background: #17171c;
-    transform: translate3d(0, 0, 1em);
-}
-
-/* This styles the open state of the button. */
-.Open {
-    color: white;
-    background: #17171c;
-    transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
-}
-
-/* This styles the open button. */
-.More-Projects-ExploreButton-Content.Open button {
-    color: white;
-    background-color: transparent;
-    border: none;
-    cursor: pointer; 
-}
 
 /* The following lines are for styling the footer at the bottom of the webpage. */
 /* This styles the FooterAtBottom container. */
