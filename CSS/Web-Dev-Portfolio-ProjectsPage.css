@@ -136,6 +136,7 @@ body {
 
 }
 
+/* This styles the container named "My-Projects-Container" which would contain the contents of my recent projects. */
 .My-Projects-Container {
     position: relative;
     display: grid;
@@ -145,44 +146,47 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     margin-left: 20px;
     margin-bottom: 20px;
-  }
+}
   
-  .My-Projects-Container-Contents {
+/* This styles the project contents within the container. */
+.My-Projects-Container-Contents {
     position: relative;
     background: var(--Maroon-Color);
     margin-top: 15px;
     margin-right: 20px;
     overflow: hidden;
     cursor: pointer;
-  }
+}
   
-  .My-Projects-Container-Contents img {
+/* This styles the images within the "My-Projects-Container-Contents" container. */
+.My-Projects-Container-Contents img {
     position: absolute;
     width: 100%;
     height: auto;
-  }
+}
   
-  
-  .My-Projects-Container-Contents p {
+/* This styles all of the paragraph elements within the "My-Projects-Container-Contents". */
+.My-Projects-Container-Contents p {
     position: absolute;
     text-align: center;
     width: 100%;
     z-index: 5;
-  }
+}
   
-  .My-Projects-Container-Contents .My-Projects-Container-ProgrammingLanguageUsed {
+/* This styles the text that details the programming languages I used for the project. */
+.My-Projects-Container-Contents .My-Projects-Container-ProgrammingLanguageUsed {
     position: absolute;
     text-align: center;
     width: 100%;
-
-  }
+}
   
-
-  .My-Projects-Container-Contents:hover .My-Projects-Container-Contents-Box {
+/* This styles the box that would appear in the project when hovered. */
+.My-Projects-Container-Contents:hover .My-Projects-Container-Contents-Box {
     transform: translateY(0);
-  }
-  
-  .My-Projects-Container-Contents-Box {
+}
+
+/* This is also the styling used for the box that would appear in the project when hovered. */
+.My-Projects-Container-Contents-Box {
     position: relative;
     display: grid;
     justify-items: center;
@@ -192,39 +196,44 @@ body {
     height: calc(125% - 35px); 
     transition: all 0.6s ease-in-out;
     opacity: 0.9;
-  }
+}
 
-  .My-Projects-Container-Contents-Box p{
+/* This styles the text that is on the box that appears when hovered. */
+.My-Projects-Container-Contents-Box p{
     font-size: 19px;
     font-weight: 1000;
     color: white;
     margin-bottom: 180px;
-  }
+}
 
-  .My-Projects-Container-ProgrammingLanguageUsed p {
+/* This styles the text (detailing the programming language used for the project) that is on the box that appears when hovered. */
+.My-Projects-Container-ProgrammingLanguageUsed p {
     font-size: 15px;
     color: white;
     font-weight: 400;
     margin-top: 30px;
-  }
+}
 
-  .My-Projects-Container-Contents-Box button {
+/* This styles the button in the box that also appears with the box when the project is hovered. */
+.My-Projects-Container-Contents-Box button {
     background: none;
     outline: none;
     border: 1px solid white;
     padding: 9px;
     cursor: pointer;
-  }
+}
   
-  .My-Projects-Container-Contents-Box button:hover {
+/* This styles the on hover effect for the button that is in the box that appears when it is hovered. */
+.My-Projects-Container-Contents-Box button:hover {
     transition: all 0.3s ease-in-out;
     background: white;
     color: var(--Maroon-Color);
     transform: scale(1.05);
     letter-spacing: 5px;
-  }
+}
   
-  .My-Projects-Container-Contents-Close {
+/* This styles the background (the space outside) of the image that enlarged when it was viewed. */
+.My-Projects-Container-Contents-Close {
     background: rgba(55, 44, 44, 0.7);
     top: 0;
     right: 0;
@@ -233,24 +242,28 @@ body {
     position: fixed;
     display: none;
     z-index: 3;
-  }
+}
   
-  .My-Projects-Container-Contents-Close.openPopUpImage {
+/* This styles the format and alignment of the pop-up image. */
+.My-Projects-Container-Contents-Close.openPopUpImage {
     display: grid;
     align-items: center;
     justify-items: center;
-  }
+}
   
-  .My-Projects-Container-Contents-Close-Content {
+/* This styles the positioning and width of the content that would hold the image of the project. */
+.My-Projects-Container-Contents-Close-Content {
     position: relative;
     width: 990px;
-  }
+}
 
-  .My-Projects-Container-Contents-Close-Content img {
+/* This styles the image within the "My-Projects-Container-Contents-Close-Content" container. */
+.My-Projects-Container-Contents-Close-Content img {
     display: block;
     max-width: 100%;
 }
 
+/* This styles the view button that enlarges the image of the project when clicked. */
 .My-Projects-Container-Contents-View-Button {
   color: white;
   font-weight: 600;
@@ -259,6 +272,7 @@ body {
   cursor: pointer;
 }
 
+/* This styles the explore button that when clicked would redirect the user to the project itself or its repository. */
 .My-Projects-Container-Contents-Explore-Button button{
   color: white;
   font-weight: 600;
@@ -267,7 +281,8 @@ body {
   cursor: pointer;
 }
 
-.close {
+/* This styles the close button that closes the enlarged image of the project when clicked. */
+.My-Projects-Container-Contents-Close-Button {
   position: absolute;
   background: none;
   font-size: 50px;
@@ -277,7 +292,8 @@ body {
   border: 0;
 }
   
-.close:hover {
+/* This styles the on hover effect of the close button that closes the enlarged image of the project when clicked. */
+.My-Projects-Container-Contents-Close-Button:hover {
   color: white;
   transition: all 0.3s ease-in-out;
   scale: 1.2;
@@ -285,7 +301,7 @@ body {
 
 
 /* The following lines are for the styling of the additional recent projects. */
-/* This styles the entire container of the Projects Section of my Website. */
+/* This styles the "Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container" container that would store more of my recent projects. They would be displayed using a image slider. */
 .Website-Pages-Web-Dev-Portfolio-ProjectsPage-Container { 
     position: relative;
     display: flex;
