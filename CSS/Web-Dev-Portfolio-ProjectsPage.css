@@ -290,6 +290,7 @@ body {
   top: 5px;
   right: 19px;
   border: 0;
+  cursor: pointer;
 }
   
 /* This styles the on hover effect of the close button that closes the enlarged image of the project when clicked. */
