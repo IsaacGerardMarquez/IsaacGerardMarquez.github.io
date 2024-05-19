@@ -366,6 +366,107 @@ body {
     font-weight: bold;
 }
   
+/* The following lines are styling used for the Services Section within the Contage Page. */
+/* This styles the entire "Contact-Page-ServicesSection" container that is responsible for the entire Services section. */
+.Contact-Page-ServicesSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+/* This styles the header for the Services Section. */
+.Contact-Page-ServicesSection-Header {
+    text-align: center;
+}
+
+/* This styles the h1 elements within the "Contact-Page-ServicesSection-Header" container. */
+.Contact-Page-ServicesSection-Header h1 {
+    color:var(--Maroon-Color);
+    font-size: 60px;
+    font-weight: 900;
+}
+
+/* This styles the p elements within the "Contact-Page-ServicesSection-Header" container. */
+.Contact-Page-ServicesSection-Header p {
+    color: var(--White-Text-Color);
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* This styles the container that will store the Service boxes. */
+.Contact-Page-ServicesSection-Content-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* This styles the Service boxes. */
+.Contact-Page-ServicesSection-BOX {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 500px;
+    width: calc(33.333% - 60px);
+    margin: 50px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: solid 2px white;
+    position: relative;
+}
+
+/* This styles the h5 elements within the "Contact-Page-ServicesSection-BOX" container. */
+.Contact-Page-ServicesSection-BOX h5 {
+    font-size: 105px;
+    font-weight: 900;
+}
+
+/* This styles the h1 elements within the "Contact-Page-ServicesSection-BOX" container. */
+.Contact-Page-ServicesSection-BOX h1 {
+    color: var(--Maroon-Color);
+    font-size: 35px;
+    font-weight: 1000;
+    text-align: center;
+}
+
+/* This styles the p elements within the "Contact-Page-ServicesSection-BOX" container. */
+.Contact-Page-ServicesSection-BOX p {
+    color: var(--White-Text-Color);
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* This would style the hover indicator on each of the Service box. */
+.Contact-Page-ServicesSection-BOX-HoverIndicator {
+    position: absolute;
+    background-color: var(--Maroon-Color);
+    height: 10px;
+    width: 200px;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 5px 5px;
+    display: none;
+    animation: Contact-Page-ServicesSection-BOX-HoverIndicator .9s;
+}
+
+/* This would style the "on hover effect" of the hover indicator on each of the Service box. */
+.Contact-Page-ServicesSection-BOX:hover {
+    box-shadow: 50px 50px 30px rgba(0, 0, 0, 0.08);
+    transition: all ease 0.5s;
+}
+
+/* This would display the hover indicator when the user hovers over the box. */
+.Contact-Page-ServicesSection-BOX:hover .Contact-Page-ServicesSection-BOX-HoverIndicator {
+    display: block;
+}
+
 /* The following lines are for styling the footer at the bottom of the webpage. */
 /* This styles the FooterAtBottom container. */
 .FooterAtBottom {
@@ -584,5 +685,38 @@ footer {
     100% {
         opacity: 1; /* It has an opacity of 1 at the end. */
         transform: translateY(0); /* It moves back to its original position. */
+    }
+}
+
+/* This is the animation keyframe for the hover indicator. */
+@keyframes Contact-Page-ServicesSection-BOX-HoverIndicator {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 200px;
+    }
+}
+
+/* Media queries for Responsiveness */
+@media (max-width: 1050px) {
+    .Contact-Page-ServicesSection-Content-Container {
+        flex-wrap: wrap;
+    }
+    .Contact-Page-ServicesSection {
+        width: 1500px;
+        height: auto;
+    }
+    .Contact-Page-ServicesSection-Header {
+        margin: 15px;
+    }
+    .Contact-Page-ServicesSection-BOX {
+        flex-grow: 1;
+        width: calc(50% - 60px);
+    }
+}
+@media (max-width: 700px) {
+    .Contact-Page-ServicesSection-BOX {
+        width: calc(100% - 60px);
     }
 }
