@@ -41,11 +41,7 @@ body {
 
 /* This styles the logo of my website. */
 .Web-Dev-Portfolio-Logo {
-    color: white;
     margin-right: auto;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: 1000;
     cursor: pointer;
     animation: slideTransitionFromRight 1.8s ease forwards;
 }
@@ -126,6 +122,7 @@ body {
 /* Styling for the contents of the Contact Me Page: */
 /* This styles the entire container of the Contact Page Section of my Website. */
 .Web-Dev-Portfolio-ContactPage {
+    margin-top: 50px;
     display: flex;
     min-height: 100vh;
 }
@@ -478,15 +475,12 @@ body {
 
 /* This styles the logo in the footer. */
 .FooterAtBottom-Logo {
+    margin-top: 30px;
     text-align: center;
-    margin-top: 25px;
     animation: slideTransitionFromRight 1s ease forwards;
 }
 
 .FooterAtBottom-Logo a{
-    font-size: 40px;
-    font-weight: 900;
-    color: white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -652,7 +646,6 @@ body {
   
 /* Footer */
 footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
