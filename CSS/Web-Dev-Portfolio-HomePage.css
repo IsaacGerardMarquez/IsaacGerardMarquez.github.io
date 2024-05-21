@@ -46,11 +46,7 @@ body {
 
 /* This styles the logo of my website. */
 .Web-Dev-Portfolio-Logo {
-    color: white;
     margin-right: auto;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: 1000;
     cursor: pointer;
     animation: slideTransitionFromRight 1.8s ease forwards;
 }
@@ -227,6 +223,7 @@ body {
     position: absolute;
     top: 50%;
     right: 0;
+    margin-top: -5px;
     transform: translateY(-50%);
     width: 769px;
     height: 769px;
@@ -332,7 +329,7 @@ body {
     right: 0;
     width: 35%;
     height: auto;
-    padding-top: 245px;
+    padding-top: 240px;
     z-index: 1; /* To make sure that the image is in the front.  */
 }
 
@@ -356,15 +353,12 @@ body {
 
 /* This styles the logo in the footer. */
 .FooterAtBottom-Logo {
+    margin-top: 30px;
     text-align: center;
-    margin-top: 25px;
     animation: slideTransitionFromRight 1s ease forwards;
 }
 
 .FooterAtBottom-Logo a{
-    font-size: 40px;
-    font-weight: 900;
-    color: white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -530,7 +524,6 @@ body {
 
 /* Footer */
 footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
